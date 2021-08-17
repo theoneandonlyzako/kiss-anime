@@ -44,7 +44,7 @@ const ThoughtForm = () => {
       await addThought({
         variables: { thoughtText },
       });
-
+      alert('One more Anime to share with your friends!')
       // clear form value
       setText("");
       setCharacterCount(0);
@@ -59,14 +59,14 @@ const ThoughtForm = () => {
         className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
       >
         Character Count: {characterCount}/280
-        {error && <span className="ml-2">Something went wrong...</span>}
+        {error && <span className="ml-2">Oops something went wrong...</span>}
       </p>
       <form
         className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="Here's a new thought..."
+          placeholder="Here's a new Anime..."
           value={thoughtText}
           className="form-input col-12 col-md-9"
           onChange={handleChange}

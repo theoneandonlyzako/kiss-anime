@@ -41,6 +41,7 @@ const Profile = () => {
       await addFriend({
         variables: { id: user._id },
       });
+      alert('One more friend to share life with!')
     } catch (e) {
       console.error(e);
     }
