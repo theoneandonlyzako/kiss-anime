@@ -1,0 +1,16 @@
+#footer-content {
+    color: white
+}
+#footer-content a {
+   color: var(--green3)
+    
+}
+#footer-content a:hover {
+    background: -webkit-linear-gradient(var(--green4), var(--primary), var(--light2));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-weight: bold;
+  cursor:pointer;
+}
