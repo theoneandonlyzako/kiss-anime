@@ -29,7 +29,7 @@ const Home = () => {
           ) : (
             <ThoughtList
               thoughts={thoughts}
-              title="So Anime of you."
+              title="This is very anime, wouldn't you say?"
             />
           )}
         </div>
