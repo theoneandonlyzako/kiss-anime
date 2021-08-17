@@ -1,0 +1,33 @@
+header {
+    background-color: #111111;
+    height: 260px;
+}
+
+h1, h4 {
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    margin: 5px 0;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.susi {
+    background-color:#232323;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+nav a {
+    padding: 6px 10px;
+    margin: 0 15px;
+    transition: all 0.2s;
+}
+
+nav a:hover {
+    color: #648D28;
+    border-radius: 8px;
+}
