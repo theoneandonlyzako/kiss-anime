@@ -28,6 +28,7 @@ const ReactionForm = ({ thoughtId }) => {
         // clear form value
         setBody('');
         setCharacterCount(0);
+        alert('Reaction has been made!')
       } catch (e) {
         console.error(e);
       }
