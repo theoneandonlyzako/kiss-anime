@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-// import { PromiseProvider } from 'mongoose';
-// import { useParams } from 'react-router-dom';
-// import { useQuery } from '@apollo/client';
-// import { QUERY_THOUGHT } from '../utils/queries';
 import AnimeList from '../components/AnimeList';
 
 
