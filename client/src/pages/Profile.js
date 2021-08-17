@@ -41,6 +41,7 @@ const Profile = () => {
       await addFriend({
         variables: { id: user._id },
       });
+      alert('One more friend to share life with!')
     } catch (e) {
       console.error(e);
     }
@@ -58,6 +59,7 @@ const Profile = () => {
           </button>
         )}
       </div>
+      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
 
       <div className="flex-row justify-space-between mb-3">
         <div className="col-12 mb-3 col-lg-8">
@@ -75,7 +77,6 @@ const Profile = () => {
           />
         </div>
       </div>
-      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
     </div>
   );
 };
