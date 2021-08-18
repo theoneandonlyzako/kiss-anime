@@ -8,6 +8,7 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!-- Below allows the app to be installable -->
   <link rel="canonical" href="https://…" />
   <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -51,9 +52,9 @@
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
       navigator.serviceWorker.register('worker.js').then(function (registration) {
-        console.log('Worker registration successful', registration.scope);
+        console.log('Okay! Worker registration successful', registration.scope);
       }, function (err) {
-        console.log('Worker registration failed', err);
+        console.log('Dangit! Worker registration failed', err);
       }).catch(function (err) {
         console.log(err);
       });

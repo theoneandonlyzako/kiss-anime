@@ -5,7 +5,11 @@ const DATA_CACHE_NAME = "data-cache-" + VERSION;
 
 const FILES_TO_CACHE = [
   "/",
-  "./index.html"
+  "./index.html",
+  "../src/app.css",
+  "../src/index.css",
+  "../src/app.js"
+
 ];
 
 // Install a service worker
@@ -33,6 +37,7 @@ self.addEventListener('fetch', event => {
       }
     )
   );
+  console.log('YES Fetched!');  
 });
 
 // Update a service worker
@@ -49,4 +54,5 @@ self.addEventListener('activate', event => {
         );
       })
     );
+    console.log('Activated!');
   });
