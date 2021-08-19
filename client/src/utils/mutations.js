@@ -80,3 +80,13 @@ export const REMOVE_FRIEND = gql`
     }
   }
 `;
+export const ADD_ANIME = gql`
+  mutation addAnime($animeText: String!) {
+    addAnime(animeText: $animeText) {
+      _id
+      animeText
+      createdAt
+      username
+    }
+  }
+`;
