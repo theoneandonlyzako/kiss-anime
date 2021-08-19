@@ -1,10 +1,18 @@
+import { useQuery } from '@apollo/client';
 import React, { useState } from 'react';
 import AnimeList from '../components/AnimeList';
+import { QUERY_ME } from '../utils/queries';
 
 
 const MyAnime = () => {
     const [animeList, SetAnimeList] = useState([]);
     const [search, SetSearch] = useState("");
+
+    const { loading, data } = useQuery(QUERY_ME, {
+
+    });
+
+    const user = data?.me || {};
 
     const HandleSearch= e =>  {
         e.preventDefault();
@@ -20,6 +28,15 @@ const MyAnime = () => {
           .then(res => res.json());
           console.log(temp.results);
           SetAnimeList(temp.results);
+      }
+
+      if (!user.username) {
+        return (
+            <h4>
+              You need to be logged in to see this page. Use the navigation links
+              above to sign up or log in!
+            </h4>
+          );
       }
 
     return (
