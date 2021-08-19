@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
@@ -85,6 +85,7 @@ export const ADD_ANIME = gql`
     addAnime(animeText: $animeText) {
       _id
       animeText
+      animeEpisodes
       createdAt
       username
     }
