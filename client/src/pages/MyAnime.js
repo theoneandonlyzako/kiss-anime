@@ -25,9 +25,19 @@ const MyAnime = () => {
           const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}
           &order_by=title&sort=asc&limit=10`)
 
-          .then(res => res.json());
-          console.log(temp.results);
-          SetAnimeList(temp.results);
+          .then(res => res.json())
+          if (temp) {
+            console.log(temp.results);
+            if (Array.isArray(temp.results)) {
+                SetAnimeList(temp.results);
+            }
+            else {
+                alert('No anime under that name!');
+            }
+          }
+          else {
+              alert('No anime under that nombre!')
+          }
       }
 
       if (!user.username) {
