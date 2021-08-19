@@ -10,6 +10,7 @@ const typeDefs = gql`
     friendCount: Int
     thoughts: [Thought]
     friends: [User]
+    animes: [Anime]
   }
 
   type Thought {
@@ -27,6 +28,13 @@ const typeDefs = gql`
     createdAt: String
     username: String
   }
+  type Anime {
+    _id: ID
+    animeText: String
+    animeEpisodes: String
+    createdAt: String
+    username: String
+  }
 
   type Auth {
     token: ID!
@@ -39,6 +47,7 @@ const typeDefs = gql`
     user(username: String!): User
     thoughts(username: String): [Thought]
     thought(_id: ID!): Thought
+    animes(username: String): [Anime]
   }
 
   type Mutation {
@@ -47,6 +56,7 @@ const typeDefs = gql`
     addThought(thoughtText: String!): Thought
     addReaction(thoughtId: ID!, reactionBody: String!): Thought
     addFriend(friendId: ID!): User
+    addAnime(animeText: String!, animeEpisodes: String!): Anime
   }
 `;
 
