@@ -1,0 +1,12 @@
+.anime-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    color: #03AC13;
+    width: 332px;
+    height: auto;
+    margin: 32px;
+
+    border-radius: 8px;
+}
