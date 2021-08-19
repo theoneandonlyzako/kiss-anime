@@ -33,8 +33,14 @@ input[type="search" i] {
     margin-left: 8px;
     border-radius: 8px;
     border: none;
-    color: #03AC13;
+    color: white;
     outline: none;
+    background-color: #111;
+    transition: all 0.5s;
+}
+
+.searchAnimeBtn:hover {
+    color: var(--primary);
     background-color: #111;
     transition: all 0.5s;
 }
