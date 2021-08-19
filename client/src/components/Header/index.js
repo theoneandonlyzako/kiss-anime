@@ -14,7 +14,7 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <Link to="/">
           <h1>KISS ANIME / キスアニメ </h1>
-          <h4>WATCH HIGH QUALITY ANIME ONLINE</h4>
+          <h4>FROM THE ASHES REBORN</h4>
         </Link>
 
         <nav className="text-center susi">
