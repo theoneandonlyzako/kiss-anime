@@ -801,6 +801,11 @@ nav a:hover {
   background-color: var(--dark);
 }
 
+.profile-title {
+  border-radius: var(--border-radius);
+  background-color: var(--green3);
+}
+
 /* FLEX CONTENT */
 .flex-row {
   display: flex;
