@@ -31,7 +31,14 @@ const userSchema = new Schema(
         type: Schema.Types.ObjectId,
         ref: 'User'
       }
-    ]
+    ],
+    animes: [
+      {
+        //REVISIT
+        type: Schema.Types.ObjectId,
+        ref: 'Anime'
+      }
+    ] 
   },
   {
     toJSON: {

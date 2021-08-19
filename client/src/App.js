@@ -16,6 +16,7 @@ import NoMatch from "./pages/NoMatch";
 import SingleThought from "./pages/SingleThought";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
+import MyAnime from "./pages/MyAnime"
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -48,6 +49,7 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/profile/:username?" component={Profile} />
+              <Route exact path="/MyAnime" component={MyAnime} />
               <Route exact path="/thought/:id" component={SingleThought} />
 
               <Route component={NoMatch} />

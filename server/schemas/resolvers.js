@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Thought } = require('../models');
+const { User, Thought, Anime } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -21,14 +21,16 @@ const resolvers = {
       return User.find()
         .select('-__v -password')
         .populate('thoughts')
-        .populate('friends');
+        .populate('friends')
+        .populate('animes');
     },
     //find one user by username
     user: async (parent, { username }) => {
       return User.findOne({ username })
         .select('-__v -password')
         .populate('friends')
-        .populate('thoughts');
+        .populate('thoughts')
+        .populate('animes');
     },
     //find all thoughts
     thoughts: async (parent, { username }) => {
@@ -38,6 +40,17 @@ const resolvers = {
     //find single thought
     thought: async (parent, { _id }) => {
       return Thought.findOne({ _id });
+    },
+
+    //find one anime by Id
+    // anime: async (parent, { _id }) => {
+    //   return Anime.findOne({ _id });
+    // },
+    
+    //find all animes
+    animes: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Anime.find(params).sort({ createdAt: -1 });
     }
   },
 
@@ -104,8 +117,26 @@ const resolvers = {
       }
 
       throw new AuthenticationError('You need to be logged in!');
+    },
+    addAnime: async (parent, args, context) => {
+      console.log(context.user.username);
+      console.log(Anime);
+      if (context.user) {
+        const anime = await Anime.create({ ...args, username: context.user.username });
+        console.log(anime);
+        await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { animes: anime } },
+          { new: true }
+        );
+
+        return anime;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
     }
   }
+
 };
 
 module.exports = resolvers;
