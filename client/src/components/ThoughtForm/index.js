@@ -45,7 +45,7 @@ const ThoughtForm = () => {
       await addThought({
         variables: { thoughtText },
       });
-      alert('One more Anime to share with your friends!')
+      alert('One more Anime to share with your followers!')
       // clear form value
       setText("");
       setCharacterCount(0);

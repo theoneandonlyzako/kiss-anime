@@ -53,6 +53,12 @@ export const QUERY_USER = gql`
         createdAt
         reactionCount
       }
+      animes {
+        _id
+        animeText
+        animeEpisodes
+        createdAt
+      }
     }
   }
 `;
@@ -80,6 +86,12 @@ export const QUERY_ME = gql`
         _id
         username
       }
+      animes {
+        _id
+        animeText
+        animeEpisodes
+        createdAt
+      }
     }
   }
 `;
@@ -94,6 +106,11 @@ export const QUERY_ME_BASIC = gql`
       friends {
         _id
         username
+      }
+      animes { 
+        _id
+        animeText
+        animeEpisodes
       }
     }
   }

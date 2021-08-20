@@ -9,7 +9,7 @@ const FriendList = ({ friendCount, username, friends }) => {
   return (
     <div>
       <h5>
-        {username}'s {friendCount} {friendCount === 1 ? 'friend' : 'friends'}
+        {username} is {friendCount === 1 ? 'friend' : 'following'} {friendCount} users
       </h5>
       {friends.map(friend => (
         <button className="btn w-100 display-block mb-2" key={friend._id}>
