@@ -61,5 +61,5 @@ If you have any questions about the repo, open an issue or contact me directly a
 
 ## Example
 
-![img](assets/images/site.gif)<br/></br>
+![img](assets/images/site.png)<br/></br>
 
