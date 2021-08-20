@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_THOUGHT } from "../../utils/mutations";
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
+import './styles.css'
 
 const ThoughtForm = () => {
   const [thoughtText, setText] = useState("");
@@ -71,7 +72,7 @@ const ThoughtForm = () => {
           className="form-input col-12 col-md-9"
           onChange={handleChange}
         ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
+        <button className="btn col-12 col-md-3" id="submittt" type="submit">
           Submit
         </button>
       </form>
