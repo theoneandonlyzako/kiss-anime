@@ -1,0 +1,46 @@
+.anime-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.searchBox {
+    display: flex;
+    margin-left: 40px;
+}
+
+.search {
+    height: 50px;
+    width: 280px;
+    border-radius: 8px;
+
+}
+
+input[type="search" i] {
+    appearance: auto;
+    box-sizing: border-box;
+    padding: 8px 16px;
+}
+
+.searchAnimeBtn {
+    width: auto;
+    height: 50px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    margin-left: 8px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    outline: none;
+    background-color: #111;
+    transition: all 0.5s;
+}
+
+.searchAnimeBtn:hover {
+    color: var(--primary);
+    background-color: #111;
+    transition: all 0.5s;
+}
