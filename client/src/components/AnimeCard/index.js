@@ -1,5 +1,5 @@
-import { useMutation } from "@apollo/client";
 import React from "react";
+import { useMutation } from "@apollo/client";
 // import { useParams } from "react-router";
 import { ADD_ANIME } from "../../utils/mutations";
 // import { QUERY_USER, QUERY_ME } from "../../utils/queries";
@@ -15,13 +15,14 @@ function AnimeCard({ anime }) {
   // const user = data?.me || data?.user || {};
 
   const handleClick = async () => {
-    console.log(anime);
+    console.log(anime.title);
+    console.log(anime.rated);
     try {
       await addAnime({
-        variables: { anime: anime.title },
+        variables: { animeText:anime.title, animeEpisodes:anime.rated },
       });
       
-      alert("DANGER");
+      alert("DANGER! YOU'VE ADDED ANOTHER ANIME!");
     } catch (e) {
       console.error(e);
     }

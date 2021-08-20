@@ -81,13 +81,12 @@ export const REMOVE_FRIEND = gql`
   }
 `;
 export const ADD_ANIME = gql`
-  mutation addAnime($animeText: String!) {
-    addAnime(animeText: $animeText) {
+  mutation addAnime($animeText: String!, $animeEpisodes: String!) {
+    addAnime(animeText: $animeText, animeEpisodes:$animeEpisodes) {
       _id
       animeText
       animeEpisodes
       createdAt
-      username
     }
   }
 `;

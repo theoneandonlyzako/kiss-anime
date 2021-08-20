@@ -9,8 +9,8 @@ const resolvers = {
         const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
           .populate('thoughts')
-          .populate('friends');
-
+          .populate('friends')
+          .populate('animes');
         return userData;
       }
 
@@ -121,8 +121,9 @@ const resolvers = {
     addAnime: async (parent, args, context) => {
       console.log(context.user.username);
       console.log(Anime);
+      console.log(args);
       if (context.user) {
-        const anime = await Anime.create({ ...args, username: context.user.username });
+        const anime = await Anime.create({ ...args });
         console.log(anime);
         await User.findByIdAndUpdate(
           { _id: context.user._id },
