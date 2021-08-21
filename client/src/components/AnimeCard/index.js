@@ -18,6 +18,7 @@ function AnimeCard({ anime }) {
   const handleClick = async () => {
     console.log(anime.title);
     console.log(anime.rated);
+    console.log(anime.episodes);
     try {
       await addAnime({
         variables: { animeText:anime.title, animeEpisodes:anime.rated },

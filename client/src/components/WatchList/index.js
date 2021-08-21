@@ -10,7 +10,7 @@ const WatchList = ({ username, animes }) => {
       <div>
         {animes.map(anime => (
           <div className="btn w-100 display-block mb-2" key={anime._id}>
-            {anime.animeText} {anime.animeEpisodes}
+            {anime.animeText} {anime.animeEpisodes} 
           </div>
         ))}
       </div>
