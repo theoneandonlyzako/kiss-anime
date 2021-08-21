@@ -55,7 +55,7 @@ const Profile = () => {
         </h2>
         {userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
-            Add Friend
+            Follow {userParam ? `${user.username}` : "User"}
           </button>
         )}
       </div>
