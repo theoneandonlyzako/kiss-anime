@@ -3,6 +3,7 @@ import { useMutation } from "@apollo/client";
 // import { useParams } from "react-router";
 import { ADD_ANIME } from "../../utils/mutations";
 // import { QUERY_USER, QUERY_ME } from "../../utils/queries";
+import './styles.css'
 
 function AnimeCard({ anime }) {
   const [addAnime] = useMutation(ADD_ANIME);
@@ -21,8 +22,8 @@ function AnimeCard({ anime }) {
       await addAnime({
         variables: { animeText:anime.title, animeEpisodes:anime.rated },
       });
-      
       alert("DANGER! YOU'VE ADDED ANOTHER ANIME!");
+      window.location.reload();
     } catch (e) {
       console.error(e);
     }
