@@ -20,10 +20,10 @@ function AnimeCard({ anime }) {
 
   const handleClick = async () => {
     console.log(anime.title);
-    console.log(anime.rated);
+    console.log(anime.episodes);
     try {
       await addAnime({
-        variables: { animeText:anime.title, animeEpisodes:anime.rated },
+        variables: { animeText:anime.title, animeEpisodes:anime.episodes },
       });
       window.location.reload();
       alert.success(<button className="btn profile-title text-secondary">Success - Good Choice!</button>)

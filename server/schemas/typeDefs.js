@@ -56,7 +56,7 @@ const typeDefs = gql`
     addThought(thoughtText: String!): Thought
     addReaction(thoughtId: ID!, reactionBody: String!): Thought
     addFriend(friendId: ID!): User
-    addAnime(animeText: String!, animeEpisodes: String!): Anime
+    addAnime(animeText: String!, animeEpisodes: Int!): Anime
   }
 `;
 
