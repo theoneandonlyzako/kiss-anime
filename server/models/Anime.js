@@ -8,7 +8,7 @@ const animeSchema = new Schema(
     },
     animeEpisodes: {
         //change to Number.
-        type: String, 
+        type: Number, 
     },
     createdAt: {
       type: Date,
