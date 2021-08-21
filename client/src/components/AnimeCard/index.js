@@ -21,8 +21,8 @@ function AnimeCard({ anime }) {
       await addAnime({
         variables: { animeText:anime.title, animeEpisodes:anime.rated },
       });
-      
       alert("DANGER! YOU'VE ADDED ANOTHER ANIME!");
+      window.location.reload();
     } catch (e) {
       console.error(e);
     }
