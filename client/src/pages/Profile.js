@@ -7,8 +7,11 @@ import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 import { ADD_FRIEND } from "../utils/mutations";
 import ThoughtForm from '../components/ThoughtForm';
+import { useAlert } from "react-alert";
 
 const Profile = () => {
+  const alert = useAlert();
+
   const [addFriend] = useMutation(ADD_FRIEND);
   const { username: userParam } = useParams();
 
@@ -41,7 +44,7 @@ const Profile = () => {
       await addFriend({
         variables: { id: user._id },
       });
-      alert('One more friend to share life with!')
+      alert.success(<button className="btn profile-title text-secondary" style={{ minWidth: 300}}>You're now following {user.username}!</button>)
     } catch (e) {
       console.error(e);
     }

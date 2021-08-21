@@ -4,8 +4,11 @@ import { useMutation } from "@apollo/client";
 import { ADD_ANIME } from "../../utils/mutations";
 // import { QUERY_USER, QUERY_ME } from "../../utils/queries";
 import './styles.css'
+import { useAlert } from "react-alert"; //replaces javascript alert
 
 function AnimeCard({ anime }) {
+  const alert = useAlert();
+
   const [addAnime] = useMutation(ADD_ANIME);
   // const { username: userParam } = useParams();
 
@@ -22,8 +25,8 @@ function AnimeCard({ anime }) {
       await addAnime({
         variables: { animeText:anime.title, animeEpisodes:anime.rated },
       });
-      alert("DANGER! YOU'VE ADDED ANOTHER ANIME!");
       window.location.reload();
+      alert.success(<button className="btn profile-title text-secondary">Success - Good Choice!</button>)
     } catch (e) {
       console.error(e);
     }
