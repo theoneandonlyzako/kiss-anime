@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_THOUGHT } from "../../utils/mutations";
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
+import './styles.css'
+import { useAlert } from "react-alert"; //replaces javascript alert
 
 const ThoughtForm = () => {
+  const alert = useAlert();
   const [thoughtText, setText] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
   const [addThought, { error }] = useMutation(ADD_THOUGHT, {
@@ -44,7 +47,7 @@ const ThoughtForm = () => {
       await addThought({
         variables: { thoughtText },
       });
-      alert('One more Anime to share with your friends!')
+      alert.success(<button className="btn profile-title text-secondary">Comment Posted - SHHHH no spoilers!</button>)
       // clear form value
       setText("");
       setCharacterCount(0);
@@ -71,7 +74,7 @@ const ThoughtForm = () => {
           className="form-input col-12 col-md-9"
           onChange={handleChange}
         ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
+        <button className="btn col-12 col-md-3" id="submittt" type="submit">
           Submit
         </button>
       </form>

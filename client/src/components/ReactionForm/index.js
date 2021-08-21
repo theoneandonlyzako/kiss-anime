@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-
+import { useAlert } from "react-alert"; //replaces javascript alert
 import { useMutation } from '@apollo/client';
 import { ADD_REACTION } from '../../utils/mutations';
 
 const ReactionForm = ({ thoughtId }) => {
+    const alert = useAlert();
     const [reactionBody, setBody] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
     const [addReaction, { error }] = useMutation(ADD_REACTION);
@@ -28,7 +29,7 @@ const ReactionForm = ({ thoughtId }) => {
         // clear form value
         setBody('');
         setCharacterCount(0);
-        alert('Reaction has been made!')
+        alert.success(<button className="btn profile-title text-secondary">Reaction Posted - SHHHH no spoilers!</button>)
       } catch (e) {
         console.error(e);
       }

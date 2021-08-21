@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import { useAlert } from "react-alert";
 
 const Signup = () => {
+
+  const alert = useAlert();
+
   const [formState, setFormState] = useState({ username: '', email: '', password: '' });
   const [addUser, { error }] = useMutation(ADD_USER);
 
@@ -30,6 +34,7 @@ const Signup = () => {
       Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
+      alert.error(<button className="btn profile-title text-secondary" style={{ minWidth: 300}}>Something went wrong :{'('}</button>)
     }
   };
 

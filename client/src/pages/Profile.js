@@ -44,7 +44,7 @@ const Profile = () => {
       await addFriend({
         variables: { id: user._id },
       });
-      alert.success(<button className="btn profile-title text-secondary">Added Friend!</button>)
+      alert.success(<button className="btn profile-title text-secondary" style={{ minWidth: 300}}>You're now following {user.username}!</button>)
     } catch (e) {
       console.error(e);
     }
@@ -58,7 +58,7 @@ const Profile = () => {
         </h2>
         {userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
-            Add Friend
+            Follow {userParam ? `${user.username}` : "User"}
           </button>
         )}
       </div>
