@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../FriendList/styles.css';
 
 const FriendList = ({ friendCount, username, friends }) => {
   if (!friends || !friends.length) {
@@ -12,7 +13,7 @@ const FriendList = ({ friendCount, username, friends }) => {
         {username} is {friendCount === 1 ? 'following' : 'following'} {friendCount} users
       </h5>
       {friends.map(friend => (
-        <button className="btn w-100 display-block mb-2" key={friend._id}>
+        <button className="btn w-100 display-block mb-2 myAnimeBtn" key={friend._id}>
           <Link to={`/profile/${friend.username}`}>{friend.username}</Link>
         </button>
       ))}

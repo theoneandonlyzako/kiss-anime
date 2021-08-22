@@ -71,10 +71,10 @@ const ThoughtForm = () => {
         <textarea
           placeholder="Here's a new Anime..."
           value={thoughtText}
-          className="form-input col-12 col-md-9"
+          className="form-input col-12 "
           onChange={handleChange}
         ></textarea>
-        <button className="btn col-12 col-md-3" id="submittt" type="submit">
+        <button className="col-12 col-md-3 submitBtn" id="submittt" type="submit">
           Submit
         </button>
       </form>
