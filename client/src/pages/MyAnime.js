@@ -19,6 +19,7 @@ const MyAnime = () => {
   });
 
   const user = data?.me || data?.user || {};
+  const test = userData?.me || userData?.user || {};
 
   // redirect to personal MyAnime page if username is the logged-in user's
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
@@ -60,7 +61,7 @@ const MyAnime = () => {
         SetSearch={SetSearch}
         animeList={animeList}
       />
-      <WatchList username={userData.me.username} animes={userData.me.animes} />
+      <WatchList username={test.username} animes={test.animes} />
     </div>
   );
 };
