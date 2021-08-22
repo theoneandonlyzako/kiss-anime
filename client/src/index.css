@@ -9,7 +9,7 @@
   --green3: #648D28;
   --green4: #83c027;
   --error: rgb(228, 46, 1);
-  --border-radius: 0.3rem;
+  --border-radius: 2rem;
   --spacing-one: calc(1rem * 0.25);
   --spacing-two: calc(1rem * 0.5);
   --spacing-three: 1rem;
@@ -81,12 +81,12 @@ p {
 }
 
 a {
-  color: var(--dark);
+  color: white;
   text-decoration: none;
 }
 
 a:visited {
-  color: inherit;
+  color: white;
 }
 
 nav {
@@ -148,14 +148,19 @@ nav a:hover {
 .card-header {
   color: var(--secondary);
   margin: 0;
-  background-color: var(--green3);
+  background: rgba(131, 192, 39, .7);
+  z-index: 2;
+  backdrop-filter: blur(2rem);
   padding: 0.625rem;
-  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .card-body {
   padding: 2.5%;
   font-size: 1.4rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: white;
 }
 
 /* FORM */
@@ -176,7 +181,7 @@ nav a:hover {
   margin: 0.2rem 0;
   font-size: 1.2rem;
   border: 2px solid var(--dark);
-  border-radius: var(--border-radius);
+  border-radius: 8px;
 }
 
 [type='radio']:checked,

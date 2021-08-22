@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './styles.css'
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
@@ -8,10 +9,10 @@ const ThoughtList = ({ thoughts, title }) => {
 
   return (
     <div>
-      <h3>{title}</h3>
+      <h3 className="title">{title}</h3>
       {thoughts &&
         thoughts.map((thought) => (
-          <div key={thought._id} className="card mb-3">
+          <div key={thought._id} className="new-card mb-3">
             <p className="card-header">
               <Link
                 to={`/profile/${thought.username}`}
@@ -20,7 +21,7 @@ const ThoughtList = ({ thoughts, title }) => {
               >
                 {thought.username}
               </Link>{" "}
-              thought on {thought.createdAt}
+              posted on {thought.createdAt}
             </p>
             <div className="card-body">
               <Link to={`/thought/${thought._id}`}>
