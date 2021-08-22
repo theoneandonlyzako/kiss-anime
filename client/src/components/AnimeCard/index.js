@@ -18,6 +18,7 @@ function AnimeCard({ anime }) {
 
   // const user = data?.me || data?.user || {};
 
+
   const handleClick = async () => {
     console.log(anime.title);
     console.log(anime.episodes);
@@ -41,7 +42,6 @@ function AnimeCard({ anime }) {
       </figure>
       <h3>{anime.title}</h3>
       <p>Number of Episodes: {anime.episodes}</p>
-      
         <button className="btn ml-auto" onClick={handleClick}>
           Add to Watch List
         </button>

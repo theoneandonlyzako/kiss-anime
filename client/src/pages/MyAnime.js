@@ -50,6 +50,7 @@ const MyAnime = () => {
     console.log(temp.results);
     SetAnimeList(temp.results);
   };
+  
 
   return (
     <div>
