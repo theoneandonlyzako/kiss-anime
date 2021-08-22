@@ -20,6 +20,7 @@ const MyAnime = () => {
   });
 
   const user = data?.me || data?.user || {};
+  const test = userData?.me || userData?.user || {};
 
   // redirect to personal MyAnime page if username is the logged-in user's
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
@@ -51,6 +52,7 @@ const MyAnime = () => {
     console.log(temp.results);
     SetAnimeList(temp.results);
   };
+  
 
   // const FetchUpcoming = async (query) => {
   //   const temp = await fetch('https://api.jikan.moe/v3/top/anime/1/upcoming').then((res) => res.json());
@@ -68,11 +70,12 @@ const MyAnime = () => {
         SetSearch={SetSearch}
         animeList={animeList}
       />
-      </div>
+
+  </div>
       <div className="col-4 col-lg-3 mb-3">
-        <WatchList username={userData.me.username} animes={userData.me.animes} />
+      <WatchList username={test.username} animes={test.animes} />
       </div>
-      
+
     </div>
   );
 };
