@@ -9,6 +9,7 @@ import WatchList from "../components/WatchList";
 const MyAnime = () => {
   const [animeList, SetAnimeList] = useState([]);
   const [search, SetSearch] = useState("");
+  // const [upcoming, SetUpcoming] = useState("");
 
   const { data: userData } = useQuery(QUERY_ME_BASIC);
 
@@ -53,15 +54,28 @@ const MyAnime = () => {
   };
   
 
+  // const FetchUpcoming = async (query) => {
+  //   const temp = await fetch('https://api.jikan.moe/v3/top/anime/1/upcoming').then((res) => res.json());
+  //   console.log(temp.results);
+  //   SetUpcoming(temp.results);
+  // }
+
   return (
-    <div>
-      <AnimeList
+    <div className="flex-row justify-space-between">
+
+      <div className="col-8 mb-3">
+        <AnimeList
         HandleSearch={HandleSearch}
         search={search}
         SetSearch={SetSearch}
         animeList={animeList}
       />
+
+  </div>
+      <div className="col-4 col-lg-3 mb-3">
       <WatchList username={test.username} animes={test.animes} />
+      </div>
+
     </div>
   );
 };
