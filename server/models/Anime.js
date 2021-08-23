@@ -14,6 +14,9 @@ const animeSchema = new Schema(
       type: Date,
       default: Date.now,
       get: timestamp => dateFormat(timestamp)
+    },
+    currentEpisode: {
+      type: Number,
     }
   },
   {

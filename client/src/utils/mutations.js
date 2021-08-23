@@ -90,3 +90,26 @@ export const ADD_ANIME = gql`
     }
   }
 `;
+export const CURRENT_EPISODE = gql`
+  mutation currentEpisode($id: ID!, $currentEpisode: Int!) {
+    currentEpisode(currentEpisode:$currentEpisode) {
+      _id
+      animeText
+      animeEpisodes
+      currentEpisode
+      createdAt
+    }
+  }
+`;
+
+export const REMOVE_ANIME = gql`
+  mutation removeAnime($id: ID!) {
+    removeAnime(id: $id) {
+      _id
+      animeText
+      animeEpisodes
+      currentEpisode
+      createdAt
+    }
+  }
+`;

@@ -119,8 +119,8 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     addAnime: async (parent, args, context) => {
-      console.log(context.user.username);
-      console.log(Anime);
+      // console.log(context.user.username);
+      // console.log(Anime);
       console.log(args);
       if (context.user) {
         const anime = await Anime.create({ ...args });
@@ -135,7 +135,47 @@ const resolvers = {
       }
 
       throw new AuthenticationError('You need to be logged in!');
-    }
+    }, 
+    currentEpisode: async (parent, args, context) => {
+      console.log(args);
+      if (context.user) {
+        return Anime.findOneAndUpdate(
+          {_id: args._id}, 
+          {currentEpisode: args.currentEpisode}, 
+          {new: true}
+          );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+
+    removeAnime: async(parent, { animeId }, context ) => {
+      if (context.user) {
+        console.log(animeId);
+        const updatedAnime = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $pull: { animes: animeId } },
+          { new: true }
+        );
+
+        return updatedAnime;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
+    },
+
+    removeFriend: async (parent, { friendId }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { friends: friendId } },
+          { new: true }
+        ).populate('friends');
+
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
+    },
   }
 
 };
