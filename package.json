@@ -24,5 +24,8 @@
   "homepage": "https://github.com/d-trecker/deep-thoughts#readme",
   "devDependencies": {
     "concurrently": "^6.2.1"
+  },
+  "dependencies": {
+    "react-contenteditable": "^3.3.6"
   }
 }

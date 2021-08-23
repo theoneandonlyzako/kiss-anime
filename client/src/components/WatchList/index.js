@@ -1,64 +1,51 @@
-
 import React from "react";
+// import ContentEditable from "react-contenteditable";
 import '../WatchList/styles.css'
+
+// import ReactDOM from "react-dom";
+
 
 const WatchList = ({ username, animes }) => {
   if (!animes || !animes.length) {
     return <p className="bg-dark text-light p-3 noAnimeWarning">{username}, No animes saved!</p>;
-  }
-
-  // function addEpisode() {
-  //   var text = (this)
-  //     .text()
-  //     .trim();
-  //   var textInput = ("<textarea>")
-  //     .addClass("form-control")
-  //     .val(text);
-
-  //   (this).replaceWith(textInput);
-  //   textInput.trigger("focus");
-  //   console.log("clicked!");
-
-  // }
-
-  const addEpisode = () => {
-    // var epis = (this)
-    //   .text()
-    //   .trim();
-    // var textInput = ("<textarea>")
-    //   .val(epis);
-
-    // (this).replaceWith(textInput);
-    // textInput.trigger("focus");
-    const epis = (document.getElementById('episodeDescription').value)
-    
-    console.log("Listening!");
-    console.log(epis);
-
   };
 
+  const addEpisode = () => {
+    
+  }
   const saveEpisode = () => {
-    // get the textarea's current value/text
-    const epis = (document.getElementById('episodeDescription').value)
-    document.setAttribute('value', epis);
-
-    // replace p element
-    // textObject.value = text
 
   }
+
+  // class MyComponent extends React.Component {
+  //   constructor() {
+  //     super();
+  //     this.state = { html: "Edit <b>me</b> !" };
+  //   }
+  
+  //   handleChange = evt => {
+  //     this.setState({ html: evt.target.value });
+  //   };
+  // }
 
   return (
     <div>
       <h5>My Anime List</h5>
       {animes.map((anime) => (
-        <div className="btn w-100 display-block mb-2 myAnimeBtn" key={anime._id}>
+        <div id="root" className="btn w-100 display-block mb-2 myAnimeBtn" key={anime._id}>
           {anime.animeText} {anime.animeEpisodes}
           <label>Current Episode</label>
-          <input onFocus={addEpisode} onBlur={saveEpisode} id="episodeDescription"></input>
+          <textarea onFocus={addEpisode} onBlur={saveEpisode} id="episode-description"></textarea>
+          {/* <ContentEditable
+            html={this.state.html} // innerHTML of the editable div
+            disabled={false} // use true to disable edition
+            onChange={this.handleChange} // handle innerHTML change
+          /> */}
         </div>
       ))}
     </div>
   );
 };
-
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<MyComponent />, rootElement);
 export default WatchList;
