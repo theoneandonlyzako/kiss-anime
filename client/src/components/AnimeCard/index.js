@@ -26,7 +26,8 @@ function AnimeCard({ anime }) {
       await addAnime({
         variables: { animeText:anime.title, animeEpisodes:anime.episodes },
       });
-      window.location.reload();
+      // window.location.reload();
+      // WatchList();
       alert.success(<button className="btn profile-title text-secondary">Success - Good Choice!</button>)
     } catch (e) {
       console.error(e);
