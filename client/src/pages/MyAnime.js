@@ -43,8 +43,15 @@ const MyAnime = () => {
   const HandleSearch = (e) => {
     e.preventDefault();
     FetchAnime(search);
-    // console.log(search);
+    console.log(search);
   };
+
+  // const HandleSearch2 = (e) => {
+  //   e.preventDefault();
+  //   console.log(search);
+  //   FetchAnime(search);
+    
+  // };
 
   const FetchAnime = async (query) => {
     const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}
