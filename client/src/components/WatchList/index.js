@@ -4,7 +4,7 @@ import '../WatchList/styles.css'
 
 const WatchList = ({ username, animes }) => {
   if (!animes || !animes.length) {
-    return <p className="bg-dark text-light p-3 noAnimeWarning">{username}, go watch some animes!</p>;
+    return <p className="bg-dark text-light p-3 noAnimeWarning">{username}, No animes saved!</p>;
   }
 
   // function addEpisode() {
@@ -30,7 +30,7 @@ const WatchList = ({ username, animes }) => {
 
     // (this).replaceWith(textInput);
     // textInput.trigger("focus");
-    console.log("clicked!");
+    console.log("Listening!");
 
   };
 
@@ -41,8 +41,8 @@ const WatchList = ({ username, animes }) => {
       .trim();
 
     // replace p element
-    var taskP = ("<input>")
-      .text(text);
+    var epis = (this.text)
+      .text(epis);
 
   }
 
@@ -53,7 +53,7 @@ const WatchList = ({ username, animes }) => {
         <div className="btn w-100 display-block mb-2 myAnimeBtn" key={anime._id}>
           {anime.animeText} {anime.animeEpisodes}
           <label>Current Episode</label>
-          <input onFocus={addEpisode} onBlur={saveEpisode} id="modalTaskDescription"></input>
+          <input onFocus={addEpisode} onBlur={saveEpisode} id="modalTaskDescription">{epis}</input>
         </div>
       ))}
     </div>
