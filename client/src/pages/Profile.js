@@ -52,9 +52,9 @@ const Profile = () => {
 
   return (
     <div>
-      <div className="flex-row mb-3">
-        <h2 className="profile-title text-secondary p-3 display-inline-block">
-         {userParam ? `${user.username}'s` : "Your"} profile
+      <div className="flex-row align-center mb-3">
+        <h2 className="profile-title  display-inline-block">
+         {userParam ? `${user.username}'s PROFILE` : "MY PROFILE"}
         </h2>
         {userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
