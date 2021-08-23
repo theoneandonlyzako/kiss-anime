@@ -103,8 +103,8 @@ export const CURRENT_EPISODE = gql`
 `;
 
 export const REMOVE_ANIME = gql`
-  mutation removeAnime($id: ID!) {
-    removeAnime(id: $id) {
+  mutation removeAnime($animeId: ID!) {
+    removeAnime(animeId: $animeId) {
       _id
       animeText
       animeEpisodes

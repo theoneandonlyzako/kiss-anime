@@ -147,7 +147,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-
+    //stop
     removeAnime: async(parent, { animeId }, context ) => {
       if (context.user) {
         console.log(animeId);
