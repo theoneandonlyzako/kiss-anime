@@ -21,12 +21,12 @@ const SingleThought = (props) => {
   }
   return (
     <div>
-      <div className="card mb-3">
+      <div className="new-card mb-3">
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
             {thought.username}
           </span>{" "}
-          thought on {thought.createdAt}
+          posted on {thought.createdAt}
         </p>
         <div className="card-body">
           <p>{thought.thoughtText}</p>

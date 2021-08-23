@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './styles.css'
+import "./styles.css";
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
@@ -26,10 +26,10 @@ const ThoughtList = ({ thoughts, title }) => {
             <div className="card-body">
               <Link to={`/thought/${thought._id}`}>
                 <p>{thought.thoughtText}</p>
-                <p className="mb-0">
-                  Reactions: {thought.reactionCount} || Click to{" "}
-                  {thought.reactionCount ? "see" : "start"} the discussion!
+                <p className="mb-0" style={{ fontSize: '.8rem'}}>
+                  Reactions: {thought.reactionCount}{" "}
                 </p>
+                <button className="reply-btn">{thought.reactionCount ? "View Replies" : "Reply"}</button>
               </Link>
             </div>
           </div>
