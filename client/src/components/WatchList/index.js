@@ -30,19 +30,20 @@ const WatchList = ({ username, animes }) => {
 
     // (this).replaceWith(textInput);
     // textInput.trigger("focus");
+    const epis = (document.getElementById('episodeDescription').value)
+    
     console.log("Listening!");
+    console.log(epis);
 
   };
 
   const saveEpisode = () => {
     // get the textarea's current value/text
-    var text = (this)
-      .val()
-      .trim();
+    const epis = (document.getElementById('episodeDescription').value)
+    document.setAttribute('value', epis);
 
     // replace p element
-    var epis = (this.text)
-      .text(epis);
+    // textObject.value = text
 
   }
 
@@ -53,7 +54,7 @@ const WatchList = ({ username, animes }) => {
         <div className="btn w-100 display-block mb-2 myAnimeBtn" key={anime._id}>
           {anime.animeText} {anime.animeEpisodes}
           <label>Current Episode</label>
-          <input onFocus={addEpisode} onBlur={saveEpisode} id="modalTaskDescription">{epis}</input>
+          <input onFocus={addEpisode} onBlur={saveEpisode} id="episodeDescription"></input>
         </div>
       ))}
     </div>
