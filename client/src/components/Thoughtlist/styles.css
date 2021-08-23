@@ -1,0 +1,26 @@
+.new-card {
+    margin: 0 0 20px 0;
+    border-radius: 8px 8px 2rem 2rem;
+    background: linear-gradient(
+        to right bottom,
+        rgba(34, 34, 34, 0.9),
+        rgba(0,0,0, 0.3)
+    );
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    color: white;
+    transition: all .1s ease-in-out;
+}
+
+.new-card:hover {
+    transform: scale(1.05);
+    background: rgba(34, 34, 34, 0.5);
+}
+
+
+.title {
+    color: white;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 2rem;
+}
