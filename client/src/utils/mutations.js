@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
@@ -81,12 +81,35 @@ export const REMOVE_FRIEND = gql`
   }
 `;
 export const ADD_ANIME = gql`
-  mutation addAnime($animeText: String!) {
-    addAnime(animeText: $animeText) {
+  mutation addAnime($animeText: String!, $animeEpisodes: Int!) {
+    addAnime(animeText: $animeText, animeEpisodes: $animeEpisodes) {
       _id
       animeText
+      animeEpisodes
       createdAt
-      username
+    }
+  }
+`;
+export const CURRENT_EPISODE = gql`
+  mutation currentEpisode($animeId: ID!, $currentEpisode: Int!) {
+    currentEpisode(animeId: $animeId, currentEpisode: $currentEpisode) {
+      _id
+      animeText
+      animeEpisodes
+      currentEpisode
+      createdAt
+    }
+  }
+`;
+
+export const REMOVE_ANIME = gql`
+  mutation removeAnime($animeId: ID!) {
+    removeAnime(animeId: $animeId) {
+      _id
+      animeText
+      animeEpisodes
+      currentEpisode
+      createdAt
     }
   }
 `;

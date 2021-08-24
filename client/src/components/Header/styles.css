@@ -16,14 +16,25 @@ h1 {
 }
 
 .susi {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color:#232323;
     padding: 24px;
     border-radius: 8px;
 }
 
+@media screen and (max-width: 640px) {
+    .susi {
+        padding: 8px;
+        font-size: small;
+        margin-top: 8px;
+    }
+}
+
 nav a {
-    padding: 6px 10px;
-    margin: 0 15px;
+    padding: 8px 16px;
+    margin: 0 16px;
     transition: all 0.2s;
 }
 

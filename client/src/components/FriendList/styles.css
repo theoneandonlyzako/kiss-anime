@@ -1,0 +1,78 @@
+.myAnimeBtn {
+  margin: 0px;
+  margin-bottom: 16px;
+}
+
+/* Lato Text */
+.lato-text {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+.friend-btn {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  margin: 5px 0;
+  border-radius: var(--border-radius);
+  border: none;
+  color: white;
+  outline: none;
+  background: linear-gradient(
+    to right bottom,
+    rgba(34, 34, 34, 0.9),
+    rgba(0, 0, 0, 0.3)
+  );
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  transition: all 0.5s;
+}
+
+.friend-btn:hover {
+    background: rgba(131, 192, 39, .7);
+    backdrop-filter: blur(2rem);
+}
+
+.reply-btn {
+    font-size: .8rem;
+    font-weight: 300;
+    font-family: 'lato', sans-serif;
+    text-decoration: none;
+    padding: 0.2rem .5rem;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    outline: none;
+    background: linear-gradient(
+      to right bottom,
+      rgba(34, 34, 34, 0.9),
+      rgba(0, 0, 0, 0.3)
+    );
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    transition: all 0.5s;
+  }
+  
+  .reply-btn:hover {
+      background: rgba(131, 192, 39, .7);
+      backdrop-filter: blur(2rem);
+  }
+
+  .text-center {
+    justify-content: center;
+  }
+
+  .friend-list-title {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    border: none;
+    color: white;
+    outline: none;
+    background: rgba(131, 192, 39, .7);
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+  }

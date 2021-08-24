@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./styles.css";
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
-    return <h3>No Thoughts Yet</h3>;
+    return <h3>Why have you not talked about Anime yet?</h3>;
   }
 
   return (
     <div>
-      <h3>{title}</h3>
+      <h3 className="title">{title}</h3>
       {thoughts &&
         thoughts.map((thought) => (
-          <div key={thought._id} className="card mb-3">
+          <div key={thought._id} className="new-card mb-3">
             <p className="card-header">
               <Link
                 to={`/profile/${thought.username}`}
@@ -20,15 +21,15 @@ const ThoughtList = ({ thoughts, title }) => {
               >
                 {thought.username}
               </Link>{" "}
-              thought on {thought.createdAt}
+              posted on {thought.createdAt}
             </p>
             <div className="card-body">
               <Link to={`/thought/${thought._id}`}>
                 <p>{thought.thoughtText}</p>
-                <p className="mb-0">
-                  Reactions: {thought.reactionCount} || Click to{" "}
-                  {thought.reactionCount ? "see" : "start"} the discussion!
+                <p className="mb-0" style={{ fontSize: '.8rem'}}>
+                  Replies: {thought.reactionCount}{" "}
                 </p>
+                <button className="reply-btn">{thought.reactionCount ? "View Replies" : "Reply"}</button>
               </Link>
             </div>
           </div>

@@ -7,8 +7,11 @@ import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 import { ADD_FRIEND } from "../utils/mutations";
 import ThoughtForm from '../components/ThoughtForm';
+import { useAlert } from "react-alert";
 
 const Profile = () => {
+  const alert = useAlert();
+
   const [addFriend] = useMutation(ADD_FRIEND);
   const { username: userParam } = useParams();
 
@@ -41,7 +44,7 @@ const Profile = () => {
       await addFriend({
         variables: { id: user._id },
       });
-      alert('One more friend to share life with!')
+      alert.success(<button className="btn profile-title text-secondary" style={{ minWidth: 300}}>You're now following {user.username}!</button>)
     } catch (e) {
       console.error(e);
     }
@@ -49,13 +52,13 @@ const Profile = () => {
 
   return (
     <div>
-      <div className="flex-row mb-3">
-        <h2 className="profile-title text-secondary p-3 display-inline-block">
-         {userParam ? `${user.username}'s` : "Your"} profile
+      <div className="flex-row align-center mb-3">
+        <h2 className="profile-title  display-inline-block">
+         {userParam ? `${user.username}'s PROFILE` : "MY PROFILE"}
         </h2>
         {userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
-            Add Friend
+            Follow {userParam ? `${user.username}` : "User"}
           </button>
         )}
       </div>
@@ -65,7 +68,7 @@ const Profile = () => {
         <div className="col-12 mb-3 col-lg-8">
           <ThoughtList
             thoughts={user.thoughts}
-            title={`${user.username}'s thoughts...`}
+            title={`${user.username}'s Posts.`}
           />
         </div>
 

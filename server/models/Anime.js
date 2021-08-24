@@ -8,12 +8,15 @@ const animeSchema = new Schema(
     },
     animeEpisodes: {
         //change to Number.
-        type: String, 
-    },
+        type: Number, 
+    },  
     createdAt: {
       type: Date,
       default: Date.now,
       get: timestamp => dateFormat(timestamp)
+    },
+    currentEpisode: {
+      type: Number,
     }
   },
   {

@@ -1,15 +1,15 @@
 :root {
-  --primary: #03AC13;
+  --primary: #03ac13;
   --secondary: #222222;
-  --tertiary: #5DBB63;
+  --tertiary: #5dbb63;
   --quatrinary: #cadbda;
   --light: #e1f5f4;
   --light2: #d3dddd;
   --dark: #646868;
-  --green3: #648D28;
+  --green3: #648d28;
   --green4: #83c027;
   --error: rgb(228, 46, 1);
-  --border-radius: 0.3rem;
+  --border-radius: 2rem;
   --spacing-one: calc(1rem * 0.25);
   --spacing-two: calc(1rem * 0.5);
   --spacing-three: 1rem;
@@ -29,12 +29,16 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Atkinson Hyperlegible', monospace;
+  font-family: "Atkinson Hyperlegible", monospace;
   font-weight: 400;
   line-height: 1.5;
   font-size: 20px;
   color: var(--dark);
-  background: -webkit-linear-gradient(var(--secondary), var(--secondary), var(--primary));
+  background: -webkit-linear-gradient(
+    var(--secondary),
+    var(--secondary),
+    var(--primary)
+  );
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -45,10 +49,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   margin: 5px 0;
   line-height: 1.25;
+  color: white;
 }
 
 h1 {
@@ -56,7 +61,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h3 {
@@ -81,12 +86,12 @@ p {
 }
 
 a {
-  color: var(--dark);
+  color: white;
   text-decoration: none;
 }
 
 a:visited {
-  color: inherit;
+  color: white;
 }
 
 nav {
@@ -126,6 +131,19 @@ nav a:hover {
   transition: all 0.5s;
 }
 
+.btn-margin-fix {
+  margin-top: 2rem;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222222;
+  color: #03ac13;
+  border: 2px solid #03ac13;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+}
+
 .btn:hover,
 .pill:hover {
   color: var(--secondary);
@@ -148,14 +166,19 @@ nav a:hover {
 .card-header {
   color: var(--secondary);
   margin: 0;
-  background-color: var(--green3);
+  background: rgba(131, 192, 39, 0.7);
+  z-index: 2;
+  backdrop-filter: blur(2rem);
   padding: 0.625rem;
-  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .card-body {
   padding: 2.5%;
   font-size: 1.4rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: white;
 }
 
 /* FORM */
@@ -176,16 +199,16 @@ nav a:hover {
   margin: 0.2rem 0;
   font-size: 1.2rem;
   border: 2px solid var(--dark);
-  border-radius: var(--border-radius);
+  border-radius: 8px;
 }
 
-[type='radio']:checked,
-[type='radio']:not(:checked) {
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
-[type='radio']:checked + label,
-[type='radio']:not(:checked) + label {
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
@@ -195,9 +218,9 @@ nav a:hover {
   margin-right: 0.2rem;
 }
 
-[type='radio']:checked + label:before,
-[type='radio']:not(:checked) + label:before {
-  content: '';
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -207,9 +230,9 @@ nav a:hover {
   border-radius: 100%;
   background: #fff;
 }
-[type='radio']:checked + label:after,
-[type='radio']:not(:checked) + label:after {
-  content: '';
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
   width: 12px;
   height: 12px;
   background-color: var(--secondary);
@@ -221,13 +244,13 @@ nav a:hover {
   transition: all 0.2s ease;
 }
 
-[type='radio']:not(:checked) + label:after {
+[type="radio"]:not(:checked) + label:after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-[type='radio']:checked + label:after {
+[type="radio"]:checked + label:after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -802,8 +825,9 @@ nav a:hover {
 }
 
 .profile-title {
-  border-radius: var(--border-radius);
-  background-color: var(--green3);
+  border-radius: 8px;
+  background-color: var(--secondary);
+  color: white;
 }
 
 /* FLEX CONTENT */
