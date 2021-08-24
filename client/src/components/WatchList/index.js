@@ -30,6 +30,12 @@ const WatchList = ({ username, animes}) => {
     deleteItem( delID )
   }
   
+  const handleCurrentEp =(e) => {
+    // const epID = e.target.parentElement.getAttribute("data-id")
+    
+  }
+
+
 
   const deleteItem = async (animeId) => {
     
@@ -61,8 +67,8 @@ const WatchList = ({ username, animes}) => {
      <h5>My Anime List</h5>
       {animes.map((anime) => (
         <div className="btn w-100 display-block mb-2 myAnimeBtn" key={anime._id} data-id={anime._id}>
-          {anime.animeText} {anime.animeEpisodes}
-          <p>Currently on episode: </p>
+          {anime.animeText} 
+          <p>Currently on episode {anime.currentEpisode} out of {anime.animeEpisodes} </p>
           <select className="select-board-size">
             {episodeOptions(anime.animeEpisodes).map((value) => (
               <option key={value} value={value}>
@@ -70,7 +76,8 @@ const WatchList = ({ username, animes}) => {
               </option>
             ))}
           </select>
-          <button className="btn w-100 display-block mb-2 myAnimeBtn" key={anime._id} data-id={anime._id} onClick={handleClick}>Remove from Watch List</button>
+          <button className="btn w-100 display-block mb-2 myAnimeBtn" key={anime._id} data-id={anime._id} onClick={handleCurrentEp}>Set Current Episode</button>
+          <button className="btn w-100 display-block mb-2 myAnimeBtn" data-id={anime._id} onClick={handleClick}>Remove from Watch List</button>
         </div>
       ))}
     </div>
