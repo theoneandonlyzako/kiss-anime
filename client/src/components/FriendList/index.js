@@ -4,7 +4,7 @@ import './styles.css';
 
 const FriendList = ({ friendCount, username, friends }) => {
   if (!friends || !friends.length) {
-    return <p className="bg-dark text-light p-3">{username}, follow someone!</p>;
+    return <p className="friend-list-title text-center text-light p-3">{username}, follow someone!</p>;
   }
 
   return (
