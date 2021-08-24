@@ -17,6 +17,12 @@ const animeSchema = new Schema(
     },
     currentEpisode: {
       type: Number,
+    },
+    animeUrl: {
+      type: String,
+    },
+    animeImage: {
+      type: String,
     }
   },
   {

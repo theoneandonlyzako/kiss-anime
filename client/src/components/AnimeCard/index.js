@@ -24,7 +24,7 @@ function AnimeCard({ anime }) {
     console.log(anime.episodes);
     try {
       await addAnime({
-        variables: { animeText:anime.title, animeEpisodes:anime.episodes },
+        variables: { animeText:anime.title, animeEpisodes:anime.episodes, animeUrl: anime.url, animeImage: anime.image_url },
       });
       window.location.reload();
       alert.success(<button className="btn profile-title text-secondary">Success - Good Choice!</button>)
