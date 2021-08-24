@@ -28,6 +28,7 @@ const typeDefs = gql`
     createdAt: String
     username: String
   }
+  
   type Anime {
     _id: ID
     animeText: String
@@ -58,7 +59,7 @@ const typeDefs = gql`
     addReaction(thoughtId: ID!, reactionBody: String!): Thought
     addFriend(friendId: ID!): User
     addAnime(animeText: String!, animeEpisodes: Int!): Anime
-    currentEpisode(currentEpisode: Int!): Anime
+    currentEpisode(animeId: ID!, currentEpisode: Int!): Anime
     removeAnime(animeId: ID!): Anime
     removeFriend(friendId: ID!): User
   }

@@ -82,7 +82,7 @@ export const REMOVE_FRIEND = gql`
 `;
 export const ADD_ANIME = gql`
   mutation addAnime($animeText: String!, $animeEpisodes: Int!) {
-    addAnime(animeText: $animeText, animeEpisodes:$animeEpisodes) {
+    addAnime(animeText: $animeText, animeEpisodes: $animeEpisodes) {
       _id
       animeText
       animeEpisodes
@@ -91,8 +91,8 @@ export const ADD_ANIME = gql`
   }
 `;
 export const CURRENT_EPISODE = gql`
-  mutation currentEpisode($id: ID!, $currentEpisode: Int!) {
-    currentEpisode(currentEpisode:$currentEpisode) {
+  mutation currentEpisode($animeId: ID!, $currentEpisode: Int!) {
+    currentEpisode(animeId: $animeId, currentEpisode: $currentEpisode) {
       _id
       animeText
       animeEpisodes
