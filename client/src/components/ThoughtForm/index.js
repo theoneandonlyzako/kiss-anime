@@ -73,6 +73,7 @@ const ThoughtForm = () => {
           value={thoughtText}
           className="form-input col-12 "
           onChange={handleChange}
+          style={{ fontFamily: 'Arial', fontWeight: 400}}
         ></textarea>
         <button className="col-12 col-md-3 submitBtn" id="submittt" type="submit">
           Submit

@@ -1,21 +1,62 @@
 .noAnimeWarning {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 .marginreset {
-    margin: 0px;
-    margin-bottom: 16px;
+  margin: 0px;
+  margin-bottom: 16px;
 }
 
 h3 {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .myAnimeCard {
-    width: 400px;
-    margin-inline-end: 32px;
+  width: 400px;
+  margin-inline-end: 32px;
 }
 
 .myAnimeList {
-    display: flex;
+  display: flex;
+}
+
+.watchlist-card {
+  font-size: 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(
+        to right bottom,
+        rgba(131, 192, 39, 0.7),
+        rgba(3, 172, 19, 0.3)
+    );
+  z-index: 3;
+  backdrop-filter: blur(2rem);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  
+}
+
+select {
+  width: 20%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  padding: .5rem;
+}
+
+.anime-card-button {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  margin: 5px 0;
+  border-radius: var(--border-radius);
+  border: none;
+  color: white;
+  outline: none;
+  background: rgb(34, 34, 34);
+}
+
+.anime-card-button:hover {
+  transform: scale(1.05);
 }

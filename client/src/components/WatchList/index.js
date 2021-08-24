@@ -9,7 +9,7 @@ const WatchList = ({ username, animes}) => {
   const [removeAnime] = useMutation(REMOVE_ANIME);
   const alert = useAlert();
     if (!animes || !animes.length) {
-      return <p className="bg-dark text-light p-3 noAnimeWarning">{username}, go watch some animes!</p>;
+      return <p className="friend-list-title text-center text-light p-3 noAnimeWarning">{username}, go watch some animes!</p>;
     } 
     
     // else if (anime.animeEpisodes > 24) {
@@ -68,8 +68,8 @@ const WatchList = ({ username, animes}) => {
      <div className='myAnimeList'>
        {animes.map((anime) => (
         <div className='myAnimeCard'>
-            <div className="btn w-100 mb-2 marginreset" key={anime._id} data-id={anime._id}>
-            {anime.animeText} 
+            <div className="watchlist-card w-100 mb-2 marginreset" key={anime._id} data-id={anime._id}>
+            {anime.animeText}
             <p>Currently on episode {anime.currentEpisode} out of {anime.animeEpisodes} </p>
             <select className="select-board-size">
               {episodeOptions(anime.animeEpisodes).map((value) => (
@@ -78,8 +78,8 @@ const WatchList = ({ username, animes}) => {
                 </option>
               ))}
             </select>
-            <button className="btn w-100 mb-2 marginreset" key={anime._id} data-id={anime._id} onClick={handleClick}>Remove from Watch List</button>
-            <button className="btn w-100 display-block mb-2 myAnimeBtn" data-id={anime._id} onClick={handleClick}>Remove from Watch List</button>
+            <button className="anime-card-button w-100 mb-2 marginreset" key={anime._id} data-id={anime._id} onClick={handleClick}>Remove from Watch List</button>
+            <button className="anime-card-button w-100 display-block mb-2 myAnimeBtn" data-id={anime._id} onClick={handleClick}>Remove from Watch List</button>
           </div>
         </div>
       ))}
