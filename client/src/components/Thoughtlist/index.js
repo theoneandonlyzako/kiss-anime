@@ -27,7 +27,7 @@ const ThoughtList = ({ thoughts, title }) => {
               <Link to={`/thought/${thought._id}`}>
                 <p>{thought.thoughtText}</p>
                 <p className="mb-0" style={{ fontSize: '.8rem'}}>
-                  Reactions: {thought.reactionCount}{" "}
+                  Replies: {thought.reactionCount}{" "}
                 </p>
                 <button className="reply-btn">{thought.reactionCount ? "View Replies" : "Reply"}</button>
               </Link>
