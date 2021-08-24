@@ -57,6 +57,7 @@ const WatchList = ({ username, animes}) => {
         variables: { animeId: animeId },
       });
       alert.success(<button className="btn profile-title text-secondary">Anime Removed</button>)
+      window.location.reload();
     } catch (e) {
       console.error(e);
     }
@@ -75,7 +76,7 @@ const WatchList = ({ username, animes}) => {
             <select className="select-board-size" id={anime._id} onChange={setTheDangEpisode}>
               {episodeOptions(anime.animeEpisodes).map((value) => (
                 <option key={value} value={value}>
-                  {value}
+                  Episode: {value}
                 </option>
               ))}
             </select>

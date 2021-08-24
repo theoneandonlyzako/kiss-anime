@@ -69,7 +69,7 @@ const ThoughtForm = () => {
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="Here's a new Anime..."
+          placeholder="What are you currently watching? No spoilers!!!"
           value={thoughtText}
           className="form-input col-12 "
           onChange={handleChange}

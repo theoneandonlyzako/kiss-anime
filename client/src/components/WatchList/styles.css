@@ -12,7 +12,7 @@ h3 {
 }
 
 .myAnimeCard {
-  width: auto;
+  width: 40%;
   margin-inline-end: 32px;
 }
 
@@ -37,7 +37,6 @@ h3 {
   border: none;
   color: white;
   border-radius: 8px;
-  
 }
 
 select {
@@ -61,4 +60,14 @@ select {
 
 .anime-card-button:hover {
   transform: scale(1.05);
+}
+
+@media only screen and (max-width: 600px) {
+  .myAnimeCard {
+    width: auto;
+  }
+
+  select {
+    width: 33%;
+  }
 }
