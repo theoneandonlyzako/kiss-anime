@@ -4,7 +4,7 @@ import "./styles.css";
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
-    return <h3>No Thoughts Yet</h3>;
+    return <h3>Why have you not talked about Anime yet?</h3>;
   }
 
   return (
