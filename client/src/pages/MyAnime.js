@@ -52,7 +52,6 @@ const MyAnime = () => {
     console.log(temp.results);
     SetAnimeList(temp.results);
   };
-  
 
   // const FetchUpcoming = async (query) => {
   //   const temp = await fetch('https://api.jikan.moe/v3/top/anime/1/upcoming').then((res) => res.json());
@@ -61,21 +60,18 @@ const MyAnime = () => {
   // }
 
   return (
-    <div className="flex-row justify-space-between">
-
+    <div id="my-anime-section" className="flex-column justify-space-between">
       <div className="col-8 mb-3">
         <AnimeList
-        HandleSearch={HandleSearch}
-        search={search}
-        SetSearch={SetSearch}
-        animeList={animeList}
-      />
-
-  </div>
-      <div className="col-4 col-lg-3 mb-3">
-      <WatchList username={test.username} animes={test.animes} />
+          HandleSearch={HandleSearch}
+          search={search}
+          SetSearch={SetSearch}
+          animeList={animeList}
+        />
       </div>
-
+      <div id="" className="col-4 col-lg-3 mb-3">
+        <WatchList username={test.username} animes={test.animes} />
+      </div>
     </div>
   );
 };

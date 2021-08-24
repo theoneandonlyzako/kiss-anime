@@ -1,10 +1,10 @@
 import React from "react";
 import AnimeCard from "../AnimeCard";
-import './styles.css'
+import "./styles.css";
 
 function AnimeList(props) {
   return (
-    <div>
+    <div id="anime-list-section">
       <form className="searchBox" onSubmit={props.HandleSearch}>
         <input
           className="search"
@@ -15,7 +15,7 @@ function AnimeList(props) {
           onChange={(e) => props.SetSearch(e.target.value)}
         />
         <button className="searchAnimeBtn d-block w-100" type="submit">
-                Submit
+          Submit
         </button>
       </form>
       <div className="anime-list">

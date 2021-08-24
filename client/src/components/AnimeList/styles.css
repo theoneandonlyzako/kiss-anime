@@ -44,3 +44,17 @@ input[type="search" i] {
     background-color: #111;
     transition: all 0.5s;
 }
+
+
+@media screen and (max-width: 655px) {
+    .searchBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .searchAnimeBtn {
+        margin-top: 10px;
+    }
+}

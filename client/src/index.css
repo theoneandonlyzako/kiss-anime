@@ -927,6 +927,19 @@ nav a:hover {
   flex: 0 0 100%;
 }
 
+#my-anime-section {
+  justify-content: center;
+  align-items: center;
+}
+
+/* my-anime page media queries */
+/* @media screen and (max-width: 775px) {
+  #my-anime-section {
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
 /* col-sm */
 @media screen and (min-width: 640px) {
   .col-sm-auto {
