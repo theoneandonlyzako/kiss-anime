@@ -12,7 +12,7 @@ h3 {
 }
 
 .myAnimeCard {
-  width: 365px;
+  width: auto;
   margin-inline-end: 32px;
 }
 
@@ -20,7 +20,6 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .watchlist-card {
