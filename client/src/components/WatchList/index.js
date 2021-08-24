@@ -58,21 +58,26 @@ const WatchList = ({ username, animes}) => {
 
  return (
     <div>
-     <h5>My Anime List</h5>
-      {animes.map((anime) => (
-        <div className="btn w-100 display-block mb-2 myAnimeBtn" key={anime._id} data-id={anime._id}>
-          {anime.animeText} {anime.animeEpisodes}
-          <p>Currently on episode: </p>
-          <select className="select-board-size">
-            {episodeOptions(anime.animeEpisodes).map((value) => (
-              <option key={value} value={value}>
-                {value}
-              </option>
-            ))}
-          </select>
-          <button className="btn w-100 display-block mb-2 myAnimeBtn" key={anime._id} data-id={anime._id} onClick={handleClick}>Remove from Watch List</button>
+     <h3>My Anime List</h3>
+     <div className='myAnimeList'>
+       {animes.map((anime) => (
+        <div className='myAnimeCard'>
+            <div className="btn w-100 mb-2 marginreset" key={anime._id} data-id={anime._id}>
+            {anime.animeText} {anime.animeEpisodes}
+            <p>Currently on episode: </p>
+            <select className="select-board-size">
+              {episodeOptions(anime.animeEpisodes).map((value) => (
+                <option key={value} value={value}>
+                  {value}
+                </option>
+              ))}
+            </select>
+            <button className="btn w-100 mb-2 marginreset" key={anime._id} data-id={anime._id} onClick={handleClick}>Remove from Watch List</button>
+          </div>
         </div>
       ))}
+     </div>
+      
     </div>
   );
 };
