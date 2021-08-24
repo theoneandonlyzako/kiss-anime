@@ -70,7 +70,7 @@ const MyAnime = () => {
   return (
     <div className="flex-row justify-space-between">
 
-      <div className="col-8 mb-3">
+      <div className="col-12 mb-3">
         <AnimeList
         HandleSearch={HandleSearch}
         search={search}
@@ -79,7 +79,7 @@ const MyAnime = () => {
       />
 
   </div>
-      <div className="col-4 col-lg-3 mb-3">
+      <div className="col-12 mb-3">
       <WatchList username={test.username} animes={test.animes} />
       </div>
 
