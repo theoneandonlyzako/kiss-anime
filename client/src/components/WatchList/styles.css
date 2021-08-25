@@ -60,6 +60,79 @@ select {
 
 .anime-card-button:hover {
   transform: scale(1.05);
+  color: var(--green4);
+}
+
+.dropDownStyle {
+  border-radius: 2rem;
+  width: 130px;
+  background-color: #222222;
+  border: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropDownStyle:hover {
+  color: var(--green4);
+}
+
+.dropDownStyle::-webkit-scrollbar {
+  width: 5px;
+  color: white;
+}
+
+.dropDownStyle::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+.dropDownStyle::-webkit-scrollbar-thumb {
+  background: var(--green4); 
+}
+
+.dropDownStyle::-webkit-scrollbar-thumb:hover {
+  background: var(--primary); 
+}
+
+select.dropDownStyle {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  appearance: none;
+}
+
+select.dropDownStyle:focus {
+  background-image:
+    linear-gradient(45deg, var(--green4) 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, var(--green4) 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+  appearance: none;
+}
+
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
 }
 
 @media only screen and (max-width: 600px) {
@@ -68,9 +141,6 @@ select {
     margin-right: 0;
   }
 
-  select {
-    width: 33%;
-  }
 
   .watchlist-card {
     width: 350px;

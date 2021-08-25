@@ -73,7 +73,7 @@ const WatchList = ({ username, animes}) => {
             <a href={anime.animeUrl} target="_blank" rel="noreferrer"> {anime.animeText} </a> 
             <p>Currently on episode {anime.currentEpisode} out of {anime.animeEpisodes} </p>
             <p>Set your current episode.</p>
-            <select className="select-board-size" id={anime._id} onChange={setTheDangEpisode}>
+            <select className="select-board-size dropDownStyle" id={anime._id} onChange={setTheDangEpisode}>
               {episodeOptions(anime.animeEpisodes).map((value) => (
                 <option key={value} value={value}>
                   Episode: {value}
