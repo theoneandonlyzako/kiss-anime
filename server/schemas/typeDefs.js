@@ -36,6 +36,8 @@ const typeDefs = gql`
     createdAt: String
     username: String
     currentEpisode: Int
+    animeUrl: String
+    animeImage: String
   }
 
   type Auth {
@@ -58,7 +60,7 @@ const typeDefs = gql`
     addThought(thoughtText: String!): Thought
     addReaction(thoughtId: ID!, reactionBody: String!): Thought
     addFriend(friendId: ID!): User
-    addAnime(animeText: String!, animeEpisodes: Int!): Anime
+    addAnime(animeText: String!, animeEpisodes: Int!, animeUrl: String!, animeImage: String!): Anime
     currentEpisode(animeId: ID!, currentEpisode: Int!): Anime
     removeAnime(animeId: ID!): Anime
     removeFriend(friendId: ID!): User

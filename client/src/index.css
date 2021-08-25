@@ -17,9 +17,9 @@
   --spacing-five: calc(1rem * 3);
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 html,
 body {
@@ -1281,4 +1281,25 @@ nav a:hover {
   .align-center-xl {
     align-items: center;
   }
+}
+
+@media screen and (max-width: 766px) {
+    .profile-title {
+      margin: 0 auto;
+    }
+
+    .searchBox {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .searchAnimeBtn {
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
 }
