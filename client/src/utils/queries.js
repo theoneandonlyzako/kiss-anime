@@ -59,6 +59,8 @@ export const QUERY_USER = gql`
         animeEpisodes
         createdAt
         currentEpisode
+        animeUrl
+        animeImage
       }
     }
   }
@@ -93,6 +95,8 @@ export const QUERY_ME = gql`
         animeEpisodes
         createdAt
         currentEpisode
+        animeUrl
+        animeImage
       }
     }
   }
@@ -114,6 +118,8 @@ export const QUERY_ME_BASIC = gql`
         animeText
         animeEpisodes
         currentEpisode
+        animeUrl
+        animeImage
       }
     }
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
-import '../Header/styles.css';
+import "../Header/styles.css";
 
 const Header = () => {
   const logout = (event) => {
@@ -20,11 +20,14 @@ const Header = () => {
         <nav className="text-center susi">
           {Auth.loggedIn() ? (
             <>
-              <Link to="/profile">My Profile</Link>
-              <Link to="/MyAnime">My Animes</Link>
-              <a href="/" onClick={logout}>
-                Logout
-              </a>
+              <span id="menu">MENU</span>
+              <div className="dropDownContent">
+                <Link to="/profile">My Profile</Link>
+                <Link to="/MyAnime">My Animes</Link>
+                <a href="/" onClick={logout}>
+                  Logout
+                </a>
+              </div>
             </>
           ) : (
             <>

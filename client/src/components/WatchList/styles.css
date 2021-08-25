@@ -13,13 +13,13 @@ h3 {
 
 .myAnimeCard {
   width: 40%;
-  margin-inline-end: 32px;
 }
 
 .myAnimeList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .watchlist-card {
@@ -65,9 +65,18 @@ select {
 @media only screen and (max-width: 600px) {
   .myAnimeCard {
     width: auto;
+    margin-right: 0;
   }
 
   select {
     width: 33%;
+  }
+
+  .watchlist-card {
+    width: 350px;
+  }
+
+  .myAnimeList {
+    justify-content: center;
   }
 }
