@@ -4,7 +4,7 @@ import './styles.css'
 
 function AnimeList(props) {
   return (
-    <div>
+    <div id="center-column">
       <form className="searchBox" onSubmit={props.HandleSearch}>
         <input
           className="search"

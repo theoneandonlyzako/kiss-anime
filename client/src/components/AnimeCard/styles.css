@@ -6,7 +6,7 @@
     color: #03AC13;
     width: 332px;
     height: auto;
-    margin: 32px;
+    margin: 32px 1rem;
     border-radius: 8px;
 }
 
@@ -19,4 +19,10 @@
     margin: 32px;
     border: 2px solid #03AC13;
     border-radius: 8px;
+}
+
+@media screen and (max-width: 450px) {
+    .anime-card {
+        margin: 32px 0px;
+    }
 }
