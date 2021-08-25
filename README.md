@@ -52,7 +52,13 @@ A Full Stack MERN Application that gives users a list for searching and saving t
 </br><br/>
 
 ## Contributing
-​Contributors: Ben Gerner, Dylan Rotich, Dylan Trecker, Michael Chambers and Zak Stamps With Lots of help from our trusty 'ol friend Google.
+​Contributors: 
+[Ben Gerner](https://github.com/bgerner)
+[Dylan Rotich](https://github.com/RotichD)
+[Dylan Trecker](https://github.com/d-trecker)
+[Michael Chambers](https://github.com/thisEmcee)
+and [Zak Stamps](https://github.com/theoneandonlyzako)
+With Lots of help from our trusty 'ol friend [Google](https://www.google.com/).
 </br><br/>
 
 ## Contact
