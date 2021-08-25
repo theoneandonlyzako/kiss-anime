@@ -19,6 +19,7 @@ const Profile = () => {
   });
 
   const user = data?.me || data?.user || {};
+  const animes = user.animes;
   // redirect to personal profile page if username is the logged-in user's
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Redirect to="/profile" />;
@@ -69,6 +70,18 @@ const Profile = () => {
             title={`${user.username}'s Posts.`}
           />
         </div>
+
+      <div>
+        <h3>{user.username} is watching: </h3>
+          {animes.map((anime) => (
+        <div className="watchlist-card w-100 mb-2 marginreset" key={anime._id} data-id={anime._id}>
+          <a href={anime.animeUrl} target="_blank" rel="noreferrer"> {anime.animeText} </a> 
+          {anime.currentEpisode < 1 && (<p> Currently on episoode 1 out of {anime.animeEpisodes}</p>)}
+          {anime.currentEpisode > 0 && (<p>Currently on episode {anime.currentEpisode} out of {anime.animeEpisodes} </p>)}
+        </div>
+       ))}
+       </div>
+
 
         <div className="col-12 col-lg-3 mb-3">
           <FriendList
