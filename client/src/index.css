@@ -17,9 +17,9 @@
   --spacing-five: calc(1rem * 3);
 }
 
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 
 html,
 body {
