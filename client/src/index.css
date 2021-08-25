@@ -1288,11 +1288,7 @@ nav a:hover {
       margin: 0 auto;
     }
 
-    .searchBox {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+    
 
     .searchAnimeBtn {
       margin-top: 10px;
@@ -1301,5 +1297,9 @@ nav a:hover {
 
     h1, h2, h3 {
       text-align: center;
+    }
+
+    .justify-space-between {
+      justify-content: center;
     }
 }
