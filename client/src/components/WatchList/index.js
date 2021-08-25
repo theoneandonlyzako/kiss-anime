@@ -71,7 +71,8 @@ const WatchList = ({ username, animes}) => {
         <div className='myAnimeCard' key={anime._id}>
             <div className="watchlist-card w-100 mb-2 marginreset" key={anime._id} data-id={anime._id}>
             <a href={anime.animeUrl} target="_blank" rel="noreferrer"> {anime.animeText} </a> 
-            <p>Currently on episode {anime.currentEpisode} out of {anime.animeEpisodes} </p>
+            {anime.currentEpisode < 1 && (<p> Currently on episoode 1 out of {anime.animeEpisodes}</p>)}
+            {anime.currentEpisode > 0 && (<p>Currently on episode {anime.currentEpisode} out of {anime.animeEpisodes} </p>)}
             <p>Set your current episode.</p>
             <select className="select-board-size" id={anime._id} onChange={setTheDangEpisode}>
               {episodeOptions(anime.animeEpisodes).map((value) => (
