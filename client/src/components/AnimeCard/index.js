@@ -42,7 +42,7 @@ function AnimeCard({ anime }) {
       </figure>
       <h3>{anime.title}</h3>
       <p>Number of Episodes: {anime.episodes}</p>
-        <button className="btn ml-auto" onClick={handleClick}>
+        <button className="anime-card-button ml-auto" onClick={handleClick}>
           Add to Watch List
         </button>
 
