@@ -3,6 +3,7 @@ import { useAlert } from "react-alert"; //replaces javascript alert
 import { useMutation } from '@apollo/client';
 import { ADD_REACTION } from '../../utils/mutations';
 
+
 const ReactionForm = ({ thoughtId }) => {
     const alert = useAlert();
     const [reactionBody, setBody] = useState('');
@@ -55,7 +56,7 @@ const ReactionForm = ({ thoughtId }) => {
           style={{ fontFamily: 'Arial', fontWeight: 400}}
         ></textarea>
 
-        <button className="btn col-12 col-md-3 " type="submit">
+        <button className="btn col-12 col-md-3" type="submit" style={{ marginLeft: 0, marginTop: 16}}>
           Submit
         </button>
       </form>
