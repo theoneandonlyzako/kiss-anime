@@ -143,10 +143,14 @@ select:-moz-focusring {
 
 
   .watchlist-card {
-    width: 350px;
+    width: 300px;
   }
 
   .myAnimeList {
     justify-content: center;
+  }
+
+  .anime-card-button {
+    font-size: 1.2rem;
   }
 }

@@ -15,7 +15,7 @@ This project is licensed under the Unlicense license.
 
 ## Table of Contents 
 * [Usage](#usage)
-* [Packages](#packages)
+* [Technologies](#technologies)
 * [Installation](#installation)
 * [Contributing](#contributing)
 * [Contact](#contact)
@@ -26,17 +26,18 @@ This project is licensed under the Unlicense license.
 A Full Stack MERN Application that gives users a list for searching and saving their favorite anime show, selecting the current episode they are on, make comments about the show and offers follow capabilities so that you can follow other users and comment on their thoughts.
 </br><br/>
 
-## Packages
-- React
-- Apollo Server
-- bcrypt
-- graphql
-- bootstrap
-- jwt-decode
-- react-dom
-- react-router-dom
-- react-scripts
-- if-env
+## Technologies
+[![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com)
+[![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)](https://expressjs.com)
+[![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org)
+[![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.dev)
+[![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com)
+[![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)](https://graphql.org)
+[![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)](https://www.apollographql.com)
+[![jwt-decode](https://img.shields.io/badge/JWT-JSON%20Web%20Token-ff69b4?style=for-the-badge&logo=jwt)](https://jwt.io)
+[![bcrypt](https://img.shields.io/badge/NPM-bcrypt-f2545b?style=for-the-badge&logo=NPM)](https://www.npmjs.com/package/bcrypt)
+[![react-alert](https://img.shields.io/badge/NPM-react--alert-f2545b?style=for-the-badge&logo=NPM)](https://www.npmjs.com/package/react-alert)
+- see package.json for more dependencies*
 </br><br/>
 
 ## Installation
@@ -68,4 +69,5 @@ If you have any questions about the repo, open an issue or contact me directly a
 ## Example
 
 ![img](assets/images/site.png)<br/></br>
+![mockUp](assets/images/mockUp.png)
 

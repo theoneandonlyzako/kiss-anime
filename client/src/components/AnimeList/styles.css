@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 100vw;
 }
 
 .searchBox {
@@ -42,4 +43,21 @@ input[type="search" i] {
     color: var(--primary);
     background-color: #111;
     transition: all 0.5s;
+}
+
+#center-column {
+    justify-content: center;
+}
+
+@media screen and (max-width: 945px) {
+    .anime-list {
+        justify-content: center;
+    }
+
+    .searchBox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
 }
